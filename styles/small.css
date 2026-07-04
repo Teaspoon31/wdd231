@@ -12,6 +12,7 @@ header {
   padding: 1rem;
   background: #003366;
   color: white;
+  min-height: 60px; /* reserves header space */
 }
 
 .logo {
@@ -25,6 +26,10 @@ nav ul {
   display: none;
   flex-direction: column;
   background: #f4f4f4;
+  position: absolute; /* overlay instead of pushing content */
+  top: 60px;
+  left: 0;
+  right: 0;
 }
 
 nav ul li {
@@ -64,6 +69,7 @@ section {
   padding: 1rem;
   margin: 0.5rem 0;
   border-radius: 5px;
+  min-height: 120px; /* prevents popping taller */
 }
 
 .course.completed {
@@ -76,6 +82,7 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+  min-height: 60px; /* reserves footer space */
 }
 
 footer .social a {
