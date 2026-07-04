@@ -12,7 +12,7 @@ header {
   padding: 1rem;
   background: #003366;
   color: white;
-  min-height: 60px; /* reserves header space */
+  min-height: 60px; /* prevents CLS */
 }
 
 .logo {
