@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Course Home Page for WDD231">
+  <meta name="author" content="Joe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD231 Course Home Page</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" class="logo">
+    <span class="site-name">Joseph Boateng</span>
+    <button id="menu" aria-label="Menu">&#9776;</button>
+  </header>
+
+  <nav>
+    <ul id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#">Chamber</a></li>
+      <li><a href="#">Final</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <div class="grid-layout">
+      <section class="courses">
+        <h2>Certificate Courses</h2>
+        <div id="courseButtons">
+          <button id="allBtn">All Courses</button>
+          <button id="wddBtn">WDD Courses</button>
+          <button id="cseBtn">CSE Courses</button>
+        </div>
+        <div id="courses"></div>
+        <p>Total Credits: <span id="totalCredits"></span></p>
+      </section>
+
+      <section class="about">
+        <h2>About This Course</h2>
+        <p>Welcome to WDD231. This page demonstrates HTML, CSS, and JavaScript fundamentals.</p>
+      </section>
+
+      <section class="resources">
+        <h2>Resources</h2>
+        <p>Links and resources will be added here.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/teaspoon31">GitHub</a>
+      <a href="https://linkedin.com/in/joseph-boateng">LinkedIn</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; <span id="year"></span> Joseph Boateng - Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .courses {
+    grid-column: 1;
+  }
+
+  .about, .resources {
+    grid-column: 2;
+  }
+
+  section {
+    background: #fafafa;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}
