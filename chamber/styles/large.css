@@ -1,32 +1,28 @@
-/* large.css */
+/* large.css (desktop overrides) */
 @media (min-width: 768px) {
-  /* Navigation: horizontal layout */
   #navLinks {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    justify-content: center;
-    background: none;
     padding: 0;
+    justify-content: center;
   }
 
-  /* Hide hamburger menu on desktop */
   #menu {
     display: none;
   }
 
-  /* Directory members: grid layout */
   #members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
 
-  /* Footer: spread out content */
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
