@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accra Chamber of Commerce - Directory</title>
+  <meta name="description" content="Browse the Accra Chamber of Commerce business directory with filters and grid/list views.">
+  <meta name="author" content="Joseph Amofa">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Accra Chamber Directory">
+  <meta property="og:description" content="Explore businesses in the Accra Chamber of Commerce">
+  <meta property="og:image" content="images/preview.png">
+  <meta property="og:url" content="https://yourgithubpagesurl/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/large.css">
+
+  <!-- JS -->
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/directory.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Chamber Logo" width="120" height="40">
+    <button id="menu">&#9776;</button>
+  </header>
+  <nav>
+    <ul id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Business Directory</h1>
+    <div class="view-toggle">
+      <button id="gridBtn">Grid</button>
+      <button id="listBtn">List</button>
+    </div>
+    <div id="members" class="grid-view"></div>
+  </main>
+  <footer>
+    <p>Accra Chamber of Commerce</p>
+    <p>10 Independence Ave, Accra, Ghana</p>
+    <p>Email: info@accracc.org | Phone: (233) 555-1234</p>
+    <div class="social">
+      <a href="#">YouTube</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <p>WDD231 Class Project<br>Joseph Amofa</p>
+    <p>&copy; <span id="year"></span> Accra Chamber of Commerce</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

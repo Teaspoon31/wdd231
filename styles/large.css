@@ -1,20 +1,24 @@
 @media (min-width: 768px) {
+  /* Navigation */
   nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
     position: static; /* normal flow on desktop */
+    background: none;
   }
 
   #menu {
-    display: none;
+    display: none; /* hide hamburger on desktop */
   }
 
+  /* Layout */
   .grid-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
+    margin: 1rem;
   }
 
   .courses {
@@ -26,8 +30,14 @@
   }
 
   section {
+    margin: 0;
     background: #fafafa;
     padding: 1rem;
     border-radius: 5px;
+  }
+
+  /* Gallery */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

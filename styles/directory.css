@@ -1,0 +1,21 @@
+#members.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#members.list-view {
+  display: block;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #fff;
+}
+.member-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}

@@ -1,17 +1,21 @@
+/* Base Typography */
 body {
   font-family: 'Roboto', sans-serif;
+  color: #000000;
+  background-color: #fafafa;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
+/* Header */
 header {
+  background-color: #003366;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: #003366;
-  color: white;
   min-height: 60px; /* prevents CLS */
 }
 
@@ -19,13 +23,21 @@ header {
   height: 40px;
 }
 
+/* Navigation */
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
 nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: none;
   flex-direction: column;
-  background: #f4f4f4;
+  background-color: #f4f4f4;
   position: absolute; /* overlay instead of pushing content */
   top: 60px;
   left: 0;
@@ -39,19 +51,15 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #003366;
+  padding: 0.5rem;
 }
 
 nav ul li a.active {
   font-weight: bold;
+  border-bottom: 2px solid #00AA66;
 }
 
-#menu {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-}
-
+/* Layout */
 .grid-layout {
   display: block;
   padding: 1rem;
@@ -60,10 +68,11 @@ nav ul li a.active {
 section {
   margin: 1rem 0;
   padding: 1rem;
-  background: #fafafa;
+  background-color: #ffffff;
   border-radius: 5px;
 }
 
+/* Courses */
 .course {
   border: 1px solid #ccc;
   padding: 1rem;
@@ -77,9 +86,23 @@ section {
   border-color: #155724;
 }
 
+/* Buttons */
+button {
+  background-color: #00AA66;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #00884d;
+}
+
+/* Footer */
 footer {
-  background: #003366;
-  color: white;
+  background-color: #003366;
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
   min-height: 60px; /* reserves footer space */
@@ -89,4 +112,28 @@ footer .social a {
   margin: 0 0.5rem;
   color: white;
   text-decoration: none;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.gallery figcaption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #003366;
+}
+
+/* Join Form Confirmation */
+#confirmation {
+  margin-top: 1rem;
+  font-size: 1rem;
 }

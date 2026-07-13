@@ -2,5 +2,9 @@ const menuButton = document.getElementById('menu');
 const navLinks = document.getElementById('navLinks');
 
 menuButton.addEventListener('click', () => {
-  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  if (navLinks.style.display === 'flex') {
+    navLinks.style.display = 'none';
+  } else {
+    navLinks.style.display = 'flex';
+  }
 });

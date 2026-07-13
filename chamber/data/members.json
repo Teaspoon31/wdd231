@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Accra Boutique",
+    "address": "123 Market Street, Accra",
+    "phone": "+233 20 123 4567",
+    "website": "https://accraboutique.com",
+    "image": "accraboutique.png",
+    "membership": 3
+  },
+  {
+    "name": "Tech Hub Ghana",
+    "address": "45 Silicon Ave, Accra",
+    "phone": "+233 24 987 6543",
+    "website": "https://techhubghana.com",
+    "image": "techhub.png",
+    "membership": 2
+  }
+]

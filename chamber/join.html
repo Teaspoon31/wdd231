@@ -1,0 +1,26 @@
+<section class="application">
+  <h2>Membership Application</h2>
+  <form id="joinForm">
+    <label for="name">Name:</label>
+    <input id="name" type="text" required>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" required>
+
+    <label for="business">Business Name:</label>
+    <input id="business" type="text" required>
+
+    <label for="level">Membership Level:</label>
+    <select id="level" required>
+      <option value="">Select a level</option>
+      <option value="nonprofit">Non-Profit</option>
+      <option value="silver">Silver</option>
+      <option value="gold">Gold</option>
+    </select>
+
+    <button type="submit">Apply</button>
+  </form>
+  <p id="confirmation" style="display:none; color:green; font-weight:bold;"></p>
+</section>
+
+<script src="../scripts/join.js" defer></script>
