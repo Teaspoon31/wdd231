@@ -1,0 +1,36 @@
+/* normalize.css - basic reset */
+
+/* Remove default margins and padding */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure consistent box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set default font size and line height */
+body {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
