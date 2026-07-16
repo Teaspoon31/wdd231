@@ -1,82 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce - Home</title>
-    <meta name="description" content="Welcome to the Chamber of Commerce. Discover local business events, weather updates, and premium member spotlights.">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 600px)">
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
+    <title>San Miguel Chamber of Commerce</title>
+    
+    <!-- Meta Description & Author -->
+    <meta name="description" content="San Miguel Chamber of Commerce home page with events, weather, and member spotlights.">
+    <meta name="author" content="Dr. Kofi Kwain">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph (OG) Meta Tags for Social Sharing -->
+    <meta property="og:title" content="San Miguel Chamber of Commerce">
+    <meta property="og:description" content="San Miguel Chamber of Commerce home page featuring community events, weather updates, and local business member spotlights.">
+    <meta property="og:image" content="https://teaspoon31.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://teaspoon31.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
 
-    <script src="js/main.js" defer></script>
+    <!-- Google Fonts API Connections (Preconnect links first) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
+
     <header>
         <div class="logo-area">
-            <img src="images/logo.svg" alt="Chamber of Commerce Logo" width="80" height="80">
-            <h1>Chamber of Commerce</h1>
+            <img src="images/logo.svg" alt="San Miguel Chamber of Commerce Logo" width="80" height="80">
+            <span>San Miguel Chamber</span>
         </div>
         <nav>
-            <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
-            <ul id="nav-menu">
+            <ul>
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="home-grid">
-        <!-- HERO SECTION -->
+    <main>
+        <!-- Single h1 must reside inside the main element to pass structural rules -->
+        <h1>San Miguel Chamber of Commerce</h1>
+
         <section class="hero">
-            <picture>
-                <source srcset="images/art.jpg" media="(min-width: 960px)">
-                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-                <img src="images/market.jpg" alt="Panoramic view of our thriving local business district" width="1200" height="600" class="hero-img" loading="eager">
-            </picture>
+            <!-- Hero image handles dynamic responsive crops -->
+            <img class="hero-img" src="images/hero.jpg" alt="View of San Miguel city" loading="eager" width="1200" height="450">
             <div class="cta-container">
-                <h2>Empowering Our Community</h2>
-                <p>Join us today to grow your network and elevate your business.</p>
+                <h2>Empowering Local Business</h2>
+                <p>Join San Miguel's network of professionals and grow your market reach.</p>
                 <a href="join.html" class="cta-btn">Join the Chamber</a>
             </div>
         </section>
 
-        <!-- CURRENT EVENTS -->
-        <section class="eventscard card">
-            <h2>Upcoming Events</h2>
-            <ul>
-                <li><strong>Annual Business Summit</strong> - October 15th, 9:00 AM</li>
-                <li><strong>Networking Breakfast</strong> - Next Tuesday, 7:30 AM</li>
-                <li><strong>Ribbon Cutting: K3 Mart</strong> - Friday, 4:00 PM</li>
-            </ul>
-        </section>
-
-        <!-- DYNAMIC WEATHER SECTION -->
-        <section class="weathercard card">
-            <h2>Local Weather</h2>
-            <div id="weather-current">
-                <p>Loading weather data...</p>
-            </div>
-            <hr>
-            <h3>3-Day Forecast</h3>
-            <div id="weather-forecast" class="forecast-grid"></div>
-        </section>
-
-        <!-- COMPANY SPOTLIGHT SECTION -->
-        <section class="spotlights-container">
+        <section class="spotlights">
             <h2>Business Spotlights</h2>
-            <div id="spotlight-cards">
-                <!-- JavaScript inserts spotlight cards here -->
+            <div class="spotlight-card">
+                <img class="spotlight-logo" src="images/logo.svg" alt="Local Member Business Logo">
+                <h3>Local Business Name</h3>
+                <p>Promoting excellence in local craft and customer services.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> | Chamber of Commerce | Dr. Kofi Kwain</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="currentyear"></span> San Miguel Chamber of Commerce | Dr. Kofi Kwain</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
+    <!-- External JavaScript Module linked at the end of the body -->
+    <script src="scripts/home.js" defer></script>
 </body>
 </html>

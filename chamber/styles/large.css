@@ -1,15 +1,23 @@
 /* ==========================================================================
-   DESKTOP MEDIA QUERY OVERRIDES (large.css)
+   DESKTOP VIEW (Screens 960px and wider)
    ========================================================================== */
 @media (min-width: 960px) {
     .hero {
-        height: 450px; /* Beautiful, wide banner layout for desktop */
+        height: 450px; /* Expands the focal artistic header banner safely */
     }
 
     .cta-container {
         bottom: 2rem;
         left: 2rem;
-        max-width: 350px;
+        max-width: 340px;
         padding: 1.5rem 2rem;
+    }
+
+    .cta-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-container p {
+        font-size: 1rem;
     }
 }

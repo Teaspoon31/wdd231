@@ -1,45 +1,97 @@
 /* ==========================================================================
-   HERO SECTION & CTA (base.css)
+   GLOBAL DEFENSIVE IMAGE CONTROLS (Prevents layout overflow)
+   ========================================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   HEADER & LOGO AREA
+   ========================================================================== */
+.logo-area img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   HERO CONTAINER & CALL-TO-ACTION (Mobile-First)
    ========================================================================== */
 .hero {
     position: relative;
     width: 100%;
-    height: 300px; /* Limit height so it doesn't swamp mobile screens */
+    height: 300px; /* Constrains vertical height on mobile screens */
     overflow: hidden;
     border-radius: 8px;
+    margin: 1.5rem 0;
 }
 
 .hero-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents stretching and squishing */
-    object-position: center; 
-    display: block;
+    object-fit: cover; /* Crops landscape and portrait images clean without distortion */
+    object-position: center;
 }
 
 .cta-container {
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background: rgba(0, 0, 0, 0.65); /* 0.65 opacity ensures AA text contrast */
-    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.7); /* Deepened opacity passes strict WCAG AA contrast */
+    padding: 1rem 1.25rem;
     border-radius: 8px;
-    color: white;
-    max-width: 280px;
+    color: #ffffff;
+    max-width: 260px;
+}
+
+.cta-container h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+}
+
+.cta-container p {
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.3;
 }
 
 .cta-btn {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     background: #0077cc;
-    color: white;
-    padding: 0.75rem 1.25rem;
-    border-radius: 6px;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
+    font-size: 0.9rem;
+    transition: background 0.2s ease-in-out;
 }
 
 .cta-btn:hover {
     background: #0055a3;
+}
+
+/* ==========================================================================
+   SPOTLIGHT CARDS
+   ========================================================================== */
+.spotlight-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.spotlight-logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    object-fit: contain;
 }
