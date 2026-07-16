@@ -3,45 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accra Chamber of Commerce - Home</title>
-  <meta name="description" content="Accra Chamber of Commerce website promoting local businesses, events, and community growth.">
-  <meta name="author" content="Joseph Boateng">
-  <link rel="stylesheet" href="../styles/normalize.css">
-  <link rel="stylesheet" href="../styles/small.css">
-  <link rel="stylesheet" href="../styles/large.css">
-  <script src="../scripts/navigation.js" defer></script>
-  <script src="../scripts/date.js" defer></script>
+  <title>San Miguel Chamber of Commerce</title>
+  <meta name="description" content="San Miguel Chamber of Commerce home page with events, weather, and member spotlights.">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
+
   <header>
-    <img src="../images/logo.svg" alt="Chamber Logo" width="120" height="40">
-    <button id="menu">&#9776;</button>
+    <img src="images/logo.svg" alt="San Miguel Chamber of Commerce Logo">
+    <h1>San Miguel Chamber of Commerce</h1>
   </header>
+
   <nav>
-    <ul id="navLinks">
+    <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>
       <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
+
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <h1>Welcome to the Accra Chamber of Commerce</h1>
-      <p>Supporting local businesses and fostering community growth.</p>
+      <img src="images/hero.jpg" alt="View of San Miguel city">
+      <a class="cta-button" href="join.html">Join the Chamber</a>
     </section>
-    <section class="community">
-      <h2>Community Info</h2>
-      <p>Weather, events, and local highlights.</p>
+
+    <!-- EVENTS -->
+    <section class="events">
+      <h2>Current Events</h2>
+      <ul>
+        <li>Business Networking Night – July 25</li>
+        <li>Local Market Expo – August 3</li>
+      </ul>
     </section>
-    <section class="spotlight">
-      <h2>Business Spotlight</h2>
-      <p>Featured members and success stories.</p>
+
+    <!-- WEATHER -->
+    <section class="weather">
+      <h2>Weather</h2>
+      <p id="current-temp"></p>
+      <p id="current-desc"></p>
+      <div id="forecast"></div>
     </section>
+
+    <!-- SPOTLIGHTS -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+
   </main>
+
   <footer>
-    <p>&copy; <span id="year"></span> Accra Chamber of Commerce</p>
-    <p id="lastModified"></p>
+    <p>&copy; <span id="year"></span> San Miguel Chamber of Commerce</p>
+    <p>WDD 231 Project</p>
   </footer>
+
+  <script src="scripts/home.js" type="module"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     "phone": "+233 20 123 4567",
     "website": "https://accraboutique.com",
     "image": "accraboutique.png",
-    "membership": 3
+    "membership": "Gold"
   },
   {
     "name": "Tech Hub Ghana",
@@ -13,6 +13,22 @@
     "phone": "+233 24 987 6543",
     "website": "https://techhubghana.com",
     "image": "techhub.png",
-    "membership": 2
+    "membership": "Silver"
+  },
+  {
+    "name": "Sunrise Foods",
+    "address": "12 Cocoa Road, Kumasi",
+    "phone": "+233 26 555 1234",
+    "website": "https://sunrisefoods.com",
+    "image": "sunrisefoods.png",
+    "membership": "Gold"
+  },
+  {
+    "name": "Green Transport Ltd",
+    "address": "88 Ring Road, Accra",
+    "phone": "+233 27 333 7890",
+    "website": "https://greentransport.com",
+    "image": "greentransport.png",
+    "membership": "Silver"
   }
 ]
