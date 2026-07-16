@@ -1,8 +1,5 @@
 // ----- FOOTER YEAR -----
-const yearSpan = document.querySelector("#year");
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
+document.querySelector("#year").textContent = new Date().getFullYear();
 
 // ----- WEATHER -----
 const weatherTemp = document.querySelector("#current-temp");
@@ -12,7 +9,7 @@ const forecastDiv = document.querySelector("#forecast");
 // Replace with your actual OpenWeatherMap API key
 const apiKey = "YOUR_API_KEY_HERE";
 
-// Example coordinates (Accra, Ghana) – change if needed
+// Accra coordinates (change if needed)
 const lat = 5.6037;
 const lon = -0.1870;
 
@@ -21,45 +18,24 @@ const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&
 async function getWeather() {
   try {
     const response = await fetch(weatherUrl);
-    if (!response.ok) {
-      throw new Error("Weather API error");
-    }
-
     const data = await response.json();
 
-    // Current weather (first item)
     const current = data.list[0];
-    const temp = current.main.temp;
-    const desc = current.weather[0].description;
+    weatherTemp.textContent = `Current Temperature: ${Math.round(current.main.temp)}°F`;
+    weatherDesc.textContent = `Conditions: ${current.weather[0].description}`;
 
-    if (weatherTemp) {
-      weatherTemp.textContent = `Current Temperature: ${Math.round(temp)}°F`;
-    }
-
-    if (weatherDesc) {
-      weatherDesc.textContent = `Conditions: ${desc}`;
-    }
-
-    // 3-day forecast (approx every 24 hours: 8 * 3-hour steps)
     forecastDiv.innerHTML = "";
     for (let i = 1; i <= 3; i++) {
-      const index = i * 8;
-      if (data.list[index]) {
-        const item = data.list[index];
-        const date = new Date(item.dt * 1000);
-        const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-        const dayTemp = Math.round(item.main.temp);
+      const item = data.list[i * 8];
+      const date = new Date(item.dt * 1000);
+      const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
 
-        const p = document.createElement("p");
-        p.textContent = `${dayName}: ${dayTemp}°F`;
-        forecastDiv.appendChild(p);
-      }
+      const p = document.createElement("p");
+      p.textContent = `${dayName}: ${Math.round(item.main.temp)}°F`;
+      forecastDiv.appendChild(p);
     }
   } catch (error) {
-    console.error("Weather error:", error);
-    if (weatherTemp) {
-      weatherTemp.textContent = "Weather data unavailable.";
-    }
+    weatherTemp.textContent = "Weather unavailable.";
   }
 }
 
@@ -71,21 +47,12 @@ const spotlightContainer = document.querySelector("#spotlight-container");
 async function loadSpotlights() {
   try {
     const response = await fetch("data/members.json");
-    if (!response.ok) {
-      throw new Error("Members JSON error");
-    }
-
     const members = await response.json();
 
-    // Filter Gold and Silver
-    const filtered = members.filter(member =>
-      member.membership === "Gold" || member.membership === "Silver"
-    );
+    const filtered = members.filter(m => m.membership === "Gold" || m.membership === "Silver");
 
-    // Shuffle and pick 2–3
     const shuffled = filtered.sort(() => Math.random() - 0.5);
-    const count = Math.min(3, shuffled.length);
-    const selected = shuffled.slice(0, count);
+    const selected = shuffled.slice(0, 3);
 
     spotlightContainer.innerHTML = "";
 
@@ -93,39 +60,18 @@ async function loadSpotlights() {
       const card = document.createElement("article");
       card.classList.add("spotlight-card");
 
-      const img = document.createElement("img");
-      img.src = `images/${member.image}`;
-      img.alt = `${member.name} logo`;
-
-      const name = document.createElement("h3");
-      name.textContent = member.name;
-
-      const phone = document.createElement("p");
-      phone.textContent = `Phone: ${member.phone}`;
-
-      const address = document.createElement("p");
-      address.textContent = member.address;
-
-      const website = document.createElement("a");
-      website.href = member.website;
-      website.target = "_blank";
-      website.rel = "noopener";
-      website.textContent = "Visit Website";
-
-      const level = document.createElement("p");
-      level.textContent = `Membership: ${member.membership}`;
-
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(phone);
-      card.appendChild(address);
-      card.appendChild(website);
-      card.appendChild(level);
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} logo">
+        <h3>${member.name}</h3>
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <a href="${member.website}" target="_blank">Visit Website</a>
+        <p>Membership: ${member.membership}</p>
+      `;
 
       spotlightContainer.appendChild(card);
     });
   } catch (error) {
-    console.error("Spotlight error:", error);
     spotlightContainer.textContent = "Unable to load member spotlights.";
   }
 }

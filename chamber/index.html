@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>San Miguel Chamber of Commerce</title>
-  <meta name="description" content="San Miguel Chamber of Commerce home page with events, weather, and member spotlights.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce - Home</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce. Discover local business events, weather updates, and premium member spotlights.">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 600px)">
+    <link rel="stylesheet" href="styles/large.css" media="(min-width: 960px)">
 
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+    <script src="js/main.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.svg" alt="Chamber of Commerce Logo" width="80" height="80">
+            <h1>Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle Menu">&#9776;</button>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <img src="images/logo.svg" alt="San Miguel Chamber of Commerce Logo">
-    <h1>San Miguel Chamber of Commerce</h1>
-  </header>
+    <main class="home-grid">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <picture>
+                <source srcset="images/art.jpg" media="(min-width: 960px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
+                <img src="images/market.jpg" alt="Panoramic view of our thriving local business district" width="1200" height="600" class="hero-img" loading="eager">
+            </picture>
+            <div class="cta-container">
+                <h2>Empowering Our Community</h2>
+                <p>Join us today to grow your network and elevate your business.</p>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </section>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+        <!-- CURRENT EVENTS -->
+        <section class="eventscard card">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Annual Business Summit</strong> - October 15th, 9:00 AM</li>
+                <li><strong>Networking Breakfast</strong> - Next Tuesday, 7:30 AM</li>
+                <li><strong>Ribbon Cutting: K3 Mart</strong> - Friday, 4:00 PM</li>
+            </ul>
+        </section>
 
-  <main>
+        <!-- DYNAMIC WEATHER SECTION -->
+        <section class="weathercard card">
+            <h2>Local Weather</h2>
+            <div id="weather-current">
+                <p>Loading weather data...</p>
+            </div>
+            <hr>
+            <h3>3-Day Forecast</h3>
+            <div id="weather-forecast" class="forecast-grid"></div>
+        </section>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img src="images/hero.jpg" alt="View of San Miguel city">
-      <a class="cta-button" href="join.html">Join the Chamber</a>
-    </section>
+        <!-- COMPANY SPOTLIGHT SECTION -->
+        <section class="spotlights-container">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-cards">
+                <!-- JavaScript inserts spotlight cards here -->
+            </div>
+        </section>
+    </main>
 
-    <!-- EVENTS -->
-    <section class="events">
-      <h2>Current Events</h2>
-      <ul>
-        <li>Business Networking Night – July 25</li>
-        <li>Local Market Expo – August 3</li>
-      </ul>
-    </section>
-
-    <!-- WEATHER -->
-    <section class="weather">
-      <h2>Weather</h2>
-      <p id="current-temp"></p>
-      <p id="current-desc"></p>
-      <div id="forecast"></div>
-    </section>
-
-    <!-- SPOTLIGHTS -->
-    <section class="spotlights">
-      <h2>Member Spotlights</h2>
-      <div id="spotlight-container"></div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>&copy; <span id="year"></span> San Miguel Chamber of Commerce</p>
-    <p>WDD 231 Project</p>
-  </footer>
-
-  <script src="scripts/home.js" type="module"></script>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Chamber of Commerce | Dr. Kofi Kwain</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

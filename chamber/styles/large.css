@@ -1,28 +1,15 @@
-/* large.css (desktop overrides) */
-@media (min-width: 768px) {
-  #navLinks {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    padding: 0;
-    justify-content: center;
-  }
+/* ==========================================================================
+   DESKTOP MEDIA QUERY OVERRIDES (large.css)
+   ========================================================================== */
+@media (min-width: 960px) {
+    .hero {
+        height: 450px; /* Beautiful, wide banner layout for desktop */
+    }
 
-  #menu {
-    display: none;
-  }
-
-  #members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-
-  footer {
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .cta-container {
+        bottom: 2rem;
+        left: 2rem;
+        max-width: 350px;
+        padding: 1.5rem 2rem;
+    }
 }

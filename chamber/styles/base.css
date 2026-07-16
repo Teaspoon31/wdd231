@@ -1,0 +1,45 @@
+/* ==========================================================================
+   HERO SECTION & CTA (base.css)
+   ========================================================================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Limit height so it doesn't swamp mobile screens */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching and squishing */
+    object-position: center; 
+    display: block;
+}
+
+.cta-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.65); /* 0.65 opacity ensures AA text contrast */
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    max-width: 280px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #0077cc;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #0055a3;
+}
